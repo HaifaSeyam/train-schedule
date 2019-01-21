@@ -1,0 +1,49 @@
+.jumbotron, h1#caption, td#tableCaption, button {
+    background-color: cadetblue;
+    text-align: center;
+    font-family: courier;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+}
+table {
+    max-height: 300px;
+    overflow-y: auto;
+}
+.table-responsive-xl, .table-responsive-lg {
+    max-height: 300px;
+}
+.table-responsive-sm, .table-responsive-md {
+    max-height: 200px;
+}
+.table, form {
+    margin: 20px;
+    margin-top: 0;
+    background-color: lightblue;
+    width: 97%;
+    font-family: courier;
+    border-radius: 20px;
+}
+td#tableCaption {
+    font-size: 30px;
+    text-align: left;
+    border-radius: 20px 20px 0 0;
+}
+h1#caption {
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 0;
+    border-radius: 20px 20px 0 0;
+}
+form {
+    border-radius: 0 0 20px 20px;
+}
+label {
+    margin-left: 7px;
+    font-weight: bold;
+}
+button.btn {
+    margin-top: 0;
+    color: black;
+    background-color: cadetblue;
+}

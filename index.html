@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Train Schedule</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!--[if lt IE 9]>
+ <script src="js/html5shiv.min.js"></script>
+ <![endif]-->
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <!-- Popper JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ <!-- Firebase library -->
+ <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+ <!-- Moments.js library -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 header">Texas Train Schedule</h1>
+            <p class="lead slogan">Safest, Fastest, and Cheapest</p>
+        </div>
+    </div>
+    <!--Schedule Table-->
+
+    <table id="tableBody" class="table .table-responsive-xl table-responsive-lg table-responsive-sm table-hover" cellspacing="0" width="100%">
+        <thead>
+            <tr><td colspan="5" id="tableCaption">Current Train Schedule</td></tr>
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequence (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!--Adding New Train Schedule Form-->
+    <h1 id="caption">Add Train</h1>
+    <form>
+        <div class="form-group">
+            <label for="trainName">Train Name</label>
+            <input type="text" class="form-control" id="trainName" placeholder="Enter train name here ...">
+        </div>
+        <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" class="form-control" id="destination" placeholder="Enter train destination here ...">
+        </div>
+        <div class="form-group">
+            <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
+            <input type="text" class="form-control" id="firstTrainTime" placeholder="Enter first train arrival time here...">
+        </div>
+        <div class="form-group">
+            <label for="frequency">Frequence (min)</label>
+            <input type="text" class="form-control" id="frequency" placeholder="Enter arrival frequency here ...">
+        </div>
+    </form>
+    <button class="btn btn-info" type="submit" id="submitBtn">Submit</button>
+
+
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ <script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
