@@ -18,12 +18,37 @@ var config = {
    var destination = $("#destination").val().trim();
    var firstTrainTime = $("#firstTrainTime").val().trim();
    var frequency = $("#frequency").val().trim();
+   /*
+    if(trainName.length == 0) || destination.length == 0 || frequency.length == 0 || firstTrainTime.length == 0){
+        alert("You have to fill all fields!");
+    }*/
+    //Form validaton
+    if(trainName.length == 0) {
+        $("#trainName").css("border", "1px solid red");
+    } else {$("#trainName").css("border", "");}
+    
+    if(destination.length == 0) {
+        $("#destination").css("border", "1px solid red");
+    } else {$("#destination").css("border", "");} 
+    
+    if(firstTrainTime.length == 0 || !moment(firstTrainTime, "HHmm", true).isValid()) {
+        $("#firstTrainTime").css("border", "1px solid red");
+    } else {$("#firstTrainTime").css("border", "");}
+    
+    if(frequency.length == 0) {
+        $("#frequency").css("border", "1px solid red");
+    }  else { $("#frequency").css("border", "");}
+    
+    if((trainName.length > 0) && (destination.length > 0) && (frequency.length > 0)
+    && (firstTrainTime.length > 0) && (moment(firstTrainTime, "HHmm", true).isValid()) ) 
+    {
         database.push({
             trainName: trainName,
             destination: destination,
             firstTrainTime: firstTrainTime,
             frequency: frequency
         });
+    }
  });
  
  database.on("child_added", function(snapshot){
