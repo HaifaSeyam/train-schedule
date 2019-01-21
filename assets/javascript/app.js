@@ -12,3 +12,18 @@ var config = {
  
  var database = firebase.database().ref();
  
+ $("#submitBtn").on("click", function () {
+
+   var trainName = $("#trainName").val().trim();
+   var destination = $("#destination").val().trim();
+   var firstTrainTime = $("#firstTrainTime").val().trim();
+   var frequency = $("#frequency").val().trim();
+
+        database.push({
+            trainName: trainName,
+            destination: destination,
+            firstTrainTime: firstTrainTime,
+            frequency: frequency
+        });
+
+ });
